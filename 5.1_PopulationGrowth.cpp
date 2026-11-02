@@ -5,5 +5,11 @@ using namespace std;
 
 int main() 
 {
+	//Declaring input variables.
+	double increaseI;
+	int dayCount, organismStart;
+
+	//Calculation variables.
+	double newPopulation, increaseP, dayIncrement;
 
 }
