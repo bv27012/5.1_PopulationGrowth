@@ -9,8 +9,9 @@ int main()
 	double increaseI;
 	int dayCount, organismStart;
 
-	//Calculation variables.
+	//Declaring calculation variables.
 	double newPopulation, increaseP, dayIncrement;
+	newPopulation = 0;
 
 	//Prompts + increase percent calculation.
 	cout << "What's the starting population? Enter as an integer greater than or equal to two." << endl;
@@ -24,6 +25,15 @@ int main()
 
 	cout << "How many days will you track this increase? Enter as an integer greater than or equal to one." << endl;
 	cin >> dayCount;
+
+	//Calculating the new population.
+	for (int count = 1; count <= dayCount; count++)
+	{
+		dayIncrement = organismStart * increaseP;
+		newPopulation += dayIncrement + organismStart;
+		cout << "Population after day " << count << ": " << newPopulation << endl;
+		cout << endl;
+	} 
 
 	return 0;
 }
