@@ -25,15 +25,31 @@ int main()
 
 	cout << "How many days will you track this increase? Enter as an integer greater than or equal to one." << endl;
 	cin >> dayCount;
+	cout << endl;
 
-	//Calculating the new population.
-	for (int count = 1; count <= dayCount; count++)
+	//Calculating the new population and locking it behind the parameters.
+	if (organismStart >= 2 && increaseI > 0 && dayCount >= 1)
 	{
-		dayIncrement = organismStart * increaseP;
-		newPopulation += dayIncrement + organismStart;
-		cout << "Population after day " << count << ": " << newPopulation << endl;
-		cout << endl;
-	} 
+		for (int count = 1; count <= dayCount; count++)
+		{
+			dayIncrement = organismStart * increaseP;
+			newPopulation += dayIncrement + organismStart;
+			cout << "Population after day " << count << ": " << newPopulation << endl;
+			cout << endl;
+		}
+	}
+	else if (organismStart < 2)
+	{
+		cout << "ERROR: The starting population must be greater than or equal to two." << endl;
+	}
+	else if(increaseI <= 0)
+	{ 
+		cout << "ERROR: The daily increae must be greater than zero." << endl;
+	}
+	else
+	{
+		cout << "ERROR: The number of days tracked must be greater than or equal to one." << endl;
+	}
 
 	return 0;
 }
