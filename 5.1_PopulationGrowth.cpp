@@ -21,7 +21,7 @@ int main()
 	cout << "How much is it increasing daily? Enter as a real number greater then zero." << endl;
 	cin >> increaseI;
 	increaseP = increaseI / 100;
-	cout << endl << "Percentage: " << increaseP << endl;
+	cout << endl << "Percentage: " << increaseP << endl << endl;
 
 	cout << "How many days will you track this increase? Enter as an integer greater than or equal to one." << endl;
 	cin >> dayCount;
